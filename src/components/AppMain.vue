@@ -1,21 +1,30 @@
 <script>
+import projectsCard from "./elements/projectsCard.vue";
 import axios from "axios";
 
 export default {
     name: "AppMain",
-    components: {},
+    components: {
+        projectsCard,
+    },
     props: {},
     data() {
         return {
             projects: "",
         };
     },
-    methods: {},
+    methods: {
+        changePage(url) {
+            axios.get(url).then((result) => {
+                this.projects = result.data.projects;
+            });
+        }
+    },
     mounted() {
         /* CHIAMATA AXIOS */
         axios.get("http://127.0.0.1:8000/api/projects").then((risultato) => {
-            console.log(risultato);
-            this.projects = risultato.data.projects.data;
+            this.projects = risultato.data.projects;
+            console.log(this.projects.links);
         });
     },
 };
@@ -23,20 +32,21 @@ export default {
 
 <template>
     <section class="container">
-        <div class="row">
-            <div v-for="project in projects" class="card" style="width: 18rem">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">{{ project.name_project }}</h5>
-                    <p class="card-text">{{ project.description }}</p>
-                    <a href="#" class="btn btn-primary"
-                        >Tipo: {{ project.type.name }}</a
-                    >
-                </div>
-            </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li v-for="link in projects.links" :class="{ disabled: !link.url, active: link.active }" class="
+                    page-item">
+                    <a href="#" class="page-link" @click="this.changePage(link.url)" v-html="link.label"></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="row justify-content-between">
+            <projectsCard v-for="project in projects.data" :project="project" />
         </div>
+
     </section>
-    <pre class="text-dark">{{ projects }}</pre>
 </template>
 
 <style scoped></style>
