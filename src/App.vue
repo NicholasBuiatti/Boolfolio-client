@@ -1,26 +1,26 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import AppMain from "./components/AppMain.vue";
+import { RouterView } from "vue-router";
 
 export default {
     name: "App",
     components: {
         AppHeader,
-        AppMain,
+        RouterView
     },
     props: {},
     data() {
         return {};
     },
     methods: {},
-    mounted() {},
+    mounted() { },
 };
 </script>
 
 <template>
     <section class="bg-dark text-white vh-100">
         <AppHeader />
-        <AppMain />
+        <router-view></router-view>
     </section>
 </template>
 
