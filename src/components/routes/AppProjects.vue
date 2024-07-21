@@ -1,5 +1,5 @@
 <script>
-import projectsCard from "./elements/projectsCard.vue";
+import projectsCard from "../elements/projectsCard.vue";
 import axios from "axios";
 
 export default {
