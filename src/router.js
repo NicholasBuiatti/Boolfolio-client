@@ -2,8 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import AppHome from "./components/routes/AppHome.vue";
 import AppProjects from "./components/routes/AppProjects.vue";
-import AppFAQs from "./components/routes/AppFAQs.vue";
+import AppSingleProject from "./components/routes/AppSingleProject.vue";
+import AppContacts from "./components/routes/AppContacts.vue";
 import AppAbout from "./components/routes/AppAbout.vue";
+import AppNotFound from "./components/routes/AppNotFound.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,14 +21,24 @@ const router = createRouter({
             component: AppProjects
         },
         {
-            path: '/FAQs',
-            name: 'FAQs',
-            component: AppFAQs
+            path: '/projects/:id',
+            name: 'Project',
+            component: AppSingleProject
+        },
+        {
+            path: '/contacts',
+            name: 'Contacts',
+            component: AppContacts
         },
         {
             path: '/about',
             name: 'About',
             component: AppAbout
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'Not-Found',
+            component: AppNotFound
         },
     ]
 });

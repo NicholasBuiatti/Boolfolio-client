@@ -1,12 +1,14 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import { RouterView } from "vue-router";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
     name: "App",
     components: {
         AppHeader,
-        RouterView
+        RouterView,
+        AppFooter
     },
     props: {},
     data() {
@@ -18,9 +20,10 @@ export default {
 </script>
 
 <template>
-    <section class="bg-dark text-white vh-100">
+    <section class="bg-dark text-white">
         <AppHeader />
         <router-view></router-view>
+        <AppFooter />
     </section>
 </template>
 

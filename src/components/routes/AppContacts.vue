@@ -2,7 +2,7 @@
 
 
 export default {
-    name: "AppFAQs",
+    name: "AppContacts",
     components: {
     },
     props: {},

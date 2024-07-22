@@ -8,7 +8,7 @@ export default {
             links: [
                 'Home',
                 'Projects',
-                'FAQs',
+                'Contacts',
                 'About',
             ]
         };
@@ -30,7 +30,6 @@ export default {
             <li v-for="link in links" class="nav-link" aria-current="page">
                 <router-link :to="{ name: link }">{{ link
                     }}</router-link>
-
             </li>
         </ul>
     </header>
