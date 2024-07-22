@@ -22,7 +22,7 @@ export default {
         }">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 justify-content-between">
                 <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ project.name_project }}</h2>
-                <router-link :to="{ name: 'Project', params: { id: project.id } }"
+                <router-link :to="{ name: 'Project', params: { slug: project.slug } }"
                     class="btn btn-info w-50">Dettagli</router-link>
                 <!-- <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">

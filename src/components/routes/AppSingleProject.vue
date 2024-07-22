@@ -12,7 +12,7 @@ export default {
 
     mounted() {
         //CREAZIONE ROTTA PER INTERO
-        const url = `${this.base_url}/api/projects/${this.$route.params.id}`
+        const url = `${this.base_url}/api/projects/${this.$route.params.slug}`
         //CHIAMATA ALLA ROTTA CREATA SOPRA
         axios.get(url).then(response => {
             //SE Cè IL DATO CON LA VARIABILE SUCCESS LO SALVO IN PROJECT

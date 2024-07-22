@@ -32,6 +32,7 @@ export default {
 </script>
 
 <template>
+    <!-- <pre>{{ projects }}</pre> -->
     <section class="container px-4 py-5">
         <div class="row justify-content-between align-item-center border-bottom pb-2">
             <h2 class="col-4">Lista dei Progetti</h2>
