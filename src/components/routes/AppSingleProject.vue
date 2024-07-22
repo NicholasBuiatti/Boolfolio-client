@@ -11,30 +11,27 @@ export default {
     },
 
     mounted() {
+        //CREAZIONE ROTTA PER INTERO
         const url = `${this.base_url}/api/projects/${this.$route.params.id}`
+        //CHIAMATA ALLA ROTTA CREATA SOPRA
+        axios.get(url).then(response => {
+            //SE Cè IL DATO CON LA VARIABILE SUCCESS LO SALVO IN PROJECT
+            if (response.data.success) {
+                this.project = response.data.project
 
-        axios
-            .get(url)
-            .then(response => {
-                console.log(response);
-                if (response.data.success) {
-                    // save the response into the vue instance
+            } else {
+                // ALTRIMENTI REINDIRIZZO ALLA PAGINA NOT-FOUND
+                this.$router.push({ name: 'Not-Found' });
+            }
 
-                    this.project = response.data.project
-
-                } else {
-                    // redirect to a 404 
-                    this.$router.push({ name: 'not-found' });
-                }
-
-            })
+        })
     }
 }
 </script>
 
 
 <template>
-    <pre>{{ project }}</pre>
+    <!-- <pre>{{ project }}</pre> -->
     <section class="container" v-if="project">
 
         <div class="card text-center">
@@ -58,6 +55,7 @@ export default {
             </div>
         </div>
 
+        <!-- VISUALIZZO L'IMMAGINE IN BASE SE è HTTP O IMMAGINE SENZA HTTP -->
         <template v-if="!project.img.startsWith('http')">
             <img class="img-fluid" :src="base_url + '/storage/' + project.img" alt="" loading="lazy">
         </template>
