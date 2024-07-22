@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <section class="bg-dark text-white">
+    <section class="bg-dark text-white min-vh-100 d-flex flex-column justify-content-between">
         <AppHeader />
         <router-view></router-view>
         <AppFooter />
