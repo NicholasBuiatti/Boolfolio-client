@@ -8,6 +8,12 @@ export default {
     props: {},
     data() {
         return {
+            name: '',
+            email: '',
+            message: '',
+            loading: false,
+            success: false,
+            errors: {},
         };
     },
     methods: {
@@ -58,3 +64,14 @@ export default {
 </template>
 
 <style scoped></style>
+
+<!-- 
+ICONE DA IMPLEMENTARE IN LARAVEL
+<i class="fa-brands fa-php"></i>
+<i class="fa-brands fa-node-js"></i>
+<i class="fa-brands fa-node"></i>
+<i class="fa-brands fa-vuejs"></i>
+<i class="fa-brands fa-laravel"></i>
+<i class="fa-brands fa-python"></i>
+
+<i class="fa-brands fa-github"></i> -->
