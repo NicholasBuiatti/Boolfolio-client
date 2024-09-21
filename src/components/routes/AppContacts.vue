@@ -29,11 +29,12 @@ export default {
 
     <div class="p-3 mb-2">
         <div class="container py-5">
-            <h1 class="display-5 fw-bold">Contact me</h1>
+            <h1 class="display-5 fw-bold">Inviami un messaggio</h1>
             <p class="col-md-8 fs-4">
-                Using a series of utilities, you can create this jumbotron, just
-                like the one in previous versions of Bootstrap. Check out the
-                examples below for how you can remix and restyle it to your liking.
+                Se hai domande, idee o proposte di collaborazione, non esitare a contattarmi! Sono
+                sempre aperto a nuove opportunità e sarei felice di discutere su come possiamo lavorare insieme. Compila
+                il modulo qui sotto o scrivimi direttamente all'indirizzo email indicato. Non vedo l'ora di sentire da
+                te!
             </p>
         </div>
     </div>
@@ -41,23 +42,24 @@ export default {
     <div class="container">
         <form>
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelper" />
+                <label for="name" class="form-label">Nome*</label>
+                <input type="text" class="form-control" name="name" id="name" required aria-describedby="nameHelper" />
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
-                    placeholder="example@mail.com" />
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" class="form-control" name="email" id="email" required aria-describedby="emailHelp"
+                    placeholder="esempio@mail.com" />
             </div>
 
             <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                <label for="message" class="form-label">Messaggio*</label>
+                <textarea class="form-control" name="message" id="message" required rows="3"></textarea>
             </div>
 
+            <p class="text-danger">I campi contrassegnati con * sono obbligatori</p>
             <button type="submit" class="btn btn-success">
-                Submit
+                Invia
             </button>
         </form>
     </div>

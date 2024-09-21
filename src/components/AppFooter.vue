@@ -12,15 +12,18 @@ export default {
 </script>
 
 <template>
-
-    <footer class="py-5">
+    <footer class="py-3">
+        <hr>
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Back to top</a>
+                <a href="#">Torna all'inizio</a>
             </p>
-            <p class="mb-1">Album example is © Bootstrap, but please download and customize it for yourself!</p>
-            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-                    href="/docs/5.0/getting-started/introduction/">getting started guide</a>.</p>
+            <p class="mb-1">© 2024 Nicholas Buiatti - Full Stack Web Developer
+                <br>
+                Passione, dedizione e innovazione al servizio del web.
+                <br>
+                <a href="">LinkedIn</a> | <a href="">GitHub</a> | <a href="">Email</a>
+            </p>
         </div>
     </footer>
 
