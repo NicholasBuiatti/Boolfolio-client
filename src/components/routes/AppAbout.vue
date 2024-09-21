@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <div class="text-center container">
+    <div class="text-center container marginTopMy">
         <main class="px-3 col-8 mx-auto">
             <h1>Ecco qualche informazione in più.</h1>
             <p class="lead">Sono Nicholas Buiatti, un Junior Full Stack Web Developer all'inizio del mio percorso
@@ -36,4 +36,8 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.marginTopMy {
+    margin-top: 5rem;
+}
+</style>

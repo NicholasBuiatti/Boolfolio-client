@@ -33,7 +33,7 @@ export default {
 
 <template>
     <!-- <pre>{{ projects }}</pre> -->
-    <section class="container px-4 py-5">
+    <section class="container px-4 py-5 marginTopMy">
         <div class="row justify-content-between align-item-center border-bottom pb-2">
             <h2 class="col-4">Lista dei Progetti</h2>
             <nav aria-label="Page navigation example" class="w-25">
@@ -55,4 +55,8 @@ export default {
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.marginTopMy {
+    margin-top: 5rem;
+}
+</style>

@@ -105,4 +105,8 @@ export default {
 .carousel-button:last-child {
     right: -50px;
 }
+
+.marginTopMy {
+    margin-top: 5rem;
+}
 </style>

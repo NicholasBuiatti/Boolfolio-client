@@ -27,7 +27,7 @@ export default {
 
 <template>
 
-    <div class="p-3 mb-2">
+    <div class="p-3 mb-2 marginTopMy">
         <div class="container py-5">
             <h1 class="display-5 fw-bold">Inviami un messaggio</h1>
             <p class="col-md-8 fs-4">
@@ -65,15 +65,8 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
-
-<!-- 
-ICONE DA IMPLEMENTARE IN LARAVEL
-<i class="fa-brands fa-php"></i>
-<i class="fa-brands fa-node-js"></i>
-<i class="fa-brands fa-node"></i>
-<i class="fa-brands fa-vuejs"></i>
-<i class="fa-brands fa-laravel"></i>
-<i class="fa-brands fa-python"></i>
-
-<i class="fa-brands fa-github"></i> -->
+<style scoped>
+.marginTopMy {
+    margin-top: 5rem;
+}
+</style>

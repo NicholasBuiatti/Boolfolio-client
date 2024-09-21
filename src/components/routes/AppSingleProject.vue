@@ -32,7 +32,7 @@ export default {
 
 <template>
     <!-- <pre>{{ project }}</pre> -->
-    <section class="container" v-if="project">
+    <section class="container marginTopMy" v-if="project">
 
         <div class="card mb-4 shadow-lg border-0 rounded-3 overflow-hidden"
             style="background: linear-gradient(to bottom left, rgba(248, 248, 248, 0.8), rgba(192, 192, 192, 0.8));">
@@ -52,7 +52,7 @@ export default {
                     <div class="card-body d-flex flex-column h-100 p-4">
                         <h1 class="card-title text-center mb-4 display-5 fw-bold text-dark text-shadow">{{
                             project.name_project
-                        }}</h1>
+                            }}</h1>
                         <p class="card-text fs-5 mb-4 text-justify">{{ project.description }}</p>
                         <p class="card-text fs-6 mb-3"><strong>Sviluppo principale:</strong> {{ project.type.name }}</p>
                         <p class="mb-2"><strong>Linguaggi utilizzati:</strong></p>
@@ -76,5 +76,9 @@ export default {
 <style scoped>
 .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.marginTopMy {
+    margin-top: 5rem;
 }
 </style>

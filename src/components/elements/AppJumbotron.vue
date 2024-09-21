@@ -12,7 +12,7 @@ export default {
 
 <template>
 
-    <section class="p-3 text-center">
+    <section class="p-3 text-center marginTopMy">
         <div class="row h-100 justify-content-center">
             <div class="col-lg-4 col-md-8 rounded-circle imgPersonale border">
 
@@ -57,5 +57,9 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.marginTopMy {
+    margin-top: 5rem;
 }
 </style>
