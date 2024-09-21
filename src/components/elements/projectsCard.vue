@@ -23,7 +23,7 @@ export default {
             <div
                 class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 justify-content-between bg-dark bg-opacity-50">
                 <h2 class="mb-4 display-6 lh-1 fw-bold">{{ project.name_project }}</h2>
-                <router-link :to="{ name: 'Project', params: { slug: project.slug } }"
+                <router-link :to="{ name: 'Progetto', params: { slug: project.slug } }"
                     class="btn btn-info w-50">Dettagli</router-link>
             </div>
         </div>

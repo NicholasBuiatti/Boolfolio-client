@@ -7,9 +7,9 @@ export default {
         return {
             links: [
                 'Home',
-                'Projects',
-                'Contacts',
-                'About',
+                'Progetti',
+                'Contattami',
+                'Riguardo me',
             ]
         };
     },

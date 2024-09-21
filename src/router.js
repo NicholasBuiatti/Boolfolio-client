@@ -17,22 +17,22 @@ const router = createRouter({
         },
         {
             path: '/projects',
-            name: 'Projects',
+            name: 'Progetti',
             component: AppProjects
         },
         {
             path: '/projects/:slug',
-            name: 'Project',
+            name: 'Progetto',
             component: AppSingleProject
         },
         {
             path: '/contacts',
-            name: 'Contacts',
+            name: 'Contattami',
             component: AppContacts
         },
         {
             path: '/about',
-            name: 'About',
+            name: 'Riguardo me',
             component: AppAbout
         },
         {
